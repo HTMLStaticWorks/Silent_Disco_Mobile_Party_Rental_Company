@@ -1,0 +1,2 @@
+# Silent_Disco_Mobile_Party_Rental_Company
+Automated website repository for Silent_Disco_Mobile_Party_Rental_Company
