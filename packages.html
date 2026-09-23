@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Packages & Pricing | Silent Beats Mobile Disco</title>
+  <meta name="description" content="Explore silent disco rental packages organized by guest count. Transparent pricing with free return shipping and an interactive package cost calculator.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVBAR (Step 4)
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-glow"><i data-lucide="headphones"></i></div>
+        Silent<span>Beats</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="packages.html" class="nav-link active">Packages</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="corporate.html" class="nav-link">Corporate</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">⇆</button>
+          <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode"><i data-lucide="sun"></i></button>
+          <a href="login.html" class="btn btn-primary nav-login-btn">Login</a>
+        </div>
+      </nav>
+
+      <button class="hamburger-btn" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <div class="logo-glow"><i data-lucide="headphones"></i></div>
+        Silent<span>Beats</span>
+      </a>
+      <button class="drawer-close-btn" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="drawer-nav-links">
+      <li><a href="index.html" class="drawer-nav-link">Home <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="home2.html" class="drawer-nav-link">Home 2 <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="services.html" class="drawer-nav-link">Services <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="packages.html" class="drawer-nav-link active">Packages <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="gallery.html" class="drawer-nav-link">Gallery <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="corporate.html" class="drawer-nav-link">Corporate <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="blog.html" class="drawer-nav-link">Blog <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="contact.html" class="drawer-nav-link">Contact <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="dashboard.html" class="drawer-nav-link">Dashboard <i data-lucide="chevron-right"></i></a></li>
+    </ul>
+    <div class="drawer-actions">
+      <div class="drawer-action-row">
+        <span>RTL / LTR</span>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">⇆</button>
+      </div>
+      <div class="drawer-action-row">
+        <span>Dark / Light Mode</span>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Theme"><i data-lucide="sun"></i></button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: PACKAGES ORGANIZED BY EVENT SIZE
+       ========================================================================== -->
+  <main>
+    <section class="section" style="padding-top: calc(var(--space-unit) * 8);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="tags"></i> Turnkey Packages</div>
+          <h1>Packages Organized by Event Size</h1>
+          <p class="section-subtitle">Choose the perfect tier for your party. All sets arrive 2 days in advance with full charging docks and cables.</p>
+        </div>
+
+        <div class="card-grid-4">
+          <!-- Tier 1: Intimate -->
+          <div class="package-card">
+            <h3 class="card-title">Intimate Party</h3>
+            <p class="card-desc">For birthdays, rooftop parties, and backyard gatherings up to 50 guests.</p>
+            <div class="package-price">$249 <span>/ weekend</span></div>
+            <ul class="package-feature-list">
+              <li class="package-feature-item"><i data-lucide="check"></i> 25–50 LED Headsets</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> 3x Long-Range Transmitters</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> Phone & Aux Connectors</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> Multi-Charging Cables</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> Free Return Shipping Label</li>
+            </ul>
+            <a href="contact.html?pkg=intimate" class="btn btn-secondary" style="width: 100%;">Book Intimate</a>
+          </div>
+
+          <!-- Tier 2: Party Monster (Featured) -->
+          <div class="package-card featured">
+            <div class="featured-badge">Best Value</div>
+            <h3 class="card-title">Party Monster</h3>
+            <p class="card-desc">For fraternities, weddings, club takeovers, and events with 75–150 guests.</p>
+            <div class="package-price">$499 <span>/ weekend</span></div>
+            <ul class="package-feature-list">
+              <li class="package-feature-item"><i data-lucide="check"></i> 100x LED Headsets</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> 3x Pro RF Transmitters</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> 1x UV Blacklight Bar</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> DJ Audio Mixer Adapter Kit</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> 24/7 Live Phone Tech Support</li>
+            </ul>
+            <a href="contact.html?pkg=monster" class="btn btn-primary" style="width: 100%;">Book Party Monster</a>
+          </div>
+
+          <!-- Tier 3: Silent Wedding Magic -->
+          <div class="package-card">
+            <h3 class="card-title">Wedding Silent Rave</h3>
+            <p class="card-desc">Curfew-beating package with white glowing bridal headsets and dual DJ input.</p>
+            <div class="package-price">$649 <span>/ weekend</span></div>
+            <ul class="package-feature-list">
+              <li class="package-feature-item"><i data-lucide="check"></i> 150x LED Headsets</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> 2x Special White Bridal Sets</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> 3x Transmitters + Wireless Mic</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> Venue Coordination Guide</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> Priority Weekend Delivery</li>
+            </ul>
+            <a href="contact.html?pkg=wedding" class="btn btn-secondary" style="width: 100%;">Book Wedding</a>
+          </div>
+
+          <!-- Tier 4: Festival Titan -->
+          <div class="package-card">
+            <h3 class="card-title">Festival Titan</h3>
+            <p class="card-desc">Massive outdoor stages, university fests, and multi-day concerts.</p>
+            <div class="package-price">$1,199 <span>/ weekend</span></div>
+            <ul class="package-feature-list">
+              <li class="package-feature-item"><i data-lucide="check"></i> 300–1,000+ Headsets</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> 3x High-Gain Stadium Transmitters</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> Heavy-Duty Rolling Flight Crates</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> Dedicated Audio Engineer Option</li>
+              <li class="package-feature-item"><i data-lucide="check"></i> Custom LED Sync Programming</li>
+            </ul>
+            <a href="contact.html?pkg=festival" class="btn btn-secondary" style="width: 100%;">Book Festival</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE CUSTOM PACKAGE CALCULATOR
+         ========================================================================== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="calculator"></i> Custom Cost Estimator</div>
+          <h2>Build Your Custom Silent Disco Package</h2>
+          <p class="section-subtitle">Adjust the guest count and select optional party add-ons for an instant real-time quote.</p>
+        </div>
+
+        <div class="calc-box">
+          <div class="calc-slider-group">
+            <div class="calc-slider-header">
+              <label class="form-label" style="font-size: 1.1rem; margin-bottom: 0;">How Many Guests / Headsets?</label>
+              <strong id="headsetCountDisplay" style="color: var(--primary); font-size: 1.3rem;">75 Headsets</strong>
+            </div>
+            <input type="range" min="25" max="1000" step="25" value="75" class="range-slider" id="headsetCountSlider">
+            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-dim); margin-top: 6px;">
+              <span>25 Sets (Intimate)</span>
+              <span>250 Sets (Large)</span>
+              <span>500 Sets (Festival)</span>
+              <span>1000 Sets (Mega)</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <label class="form-label" style="font-size: 1rem;">Select Optional Add-ons:</label>
+            <div class="calc-addons-grid">
+              <label class="addon-checkbox-label">
+                <input type="checkbox" class="addon-calc-check" data-price="75">
+                <span>UV Glow Blacklight Bar (+$75)</span>
+              </label>
+
+              <label class="addon-checkbox-label">
+                <input type="checkbox" class="addon-calc-check" data-price="95">
+                <span>4-in-1 Laser Strobe Rig (+$95)</span>
+              </label>
+
+              <label class="addon-checkbox-label">
+                <input type="checkbox" class="addon-calc-check" data-price="45">
+                <span>Wireless MC Microphone (+$45)</span>
+              </label>
+
+              <label class="addon-checkbox-label">
+                <input type="checkbox" class="addon-calc-check" data-price="60">
+                <span>Party Fog / Haze Machine (+$60)</span>
+              </label>
+
+              <label class="addon-checkbox-label">
+                <input type="checkbox" class="addon-calc-check" data-price="250">
+                <span>On-Site Sound Tech (4 hrs) (+$250)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="calc-summary-row">
+            <div>
+              <span style="font-size: 0.9rem; color: var(--text-muted);">Estimated Weekend Total:</span>
+              <div id="estimatedPriceDisplay" style="font-family: var(--font-heading); font-size: 2.4rem; font-weight: var(--weight-h2); color: var(--text-main);">$487</div>
+            </div>
+            <a href="contact.html" class="btn btn-primary btn-lg"><i data-lucide="check-circle"></i> Reserve This Setup</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ SECTION
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="help-circle"></i> Common Questions</div>
+          <h2>Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about deliveries, deposits, and returns.</p>
+        </div>
+
+        <div class="faq-accordion-list">
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>When does the equipment arrive before my event?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We guarantee doorstep delivery at least 2 full business days prior to your scheduled party date. This gives you ample time to inspect the gear and run a quick test.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do we connect our music to the 3 transmitters?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Each transmitter connects in seconds via standard 3.5mm headphone jacks, Lightning/USB-C phone adapters (included in every kit), RCA cables for DJ decks, or Bluetooth.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does return shipping work?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Every order includes a pre-printed, prepaid UPS/FedEx return label. On the Monday after your event, pack the headsets back into the heavy-duty box and drop it at any shipping point.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are the headsets sanitized between rentals?</span>
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Every single headset undergoes a medical-grade UV-C sterilization and hospital-grade antibacterial wipedown process before being sealed in hygienic transport wraps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (Step 10)
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-glow"><i data-lucide="headphones"></i></div>
+            Silent<span>Beats</span>
+          </a>
+          <p>North America's premier 3-channel mobile silent disco and immersive party audio rental company.</p>
+          <div class="footer-social-links">
+            <a href="#" class="icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Festival Edition (Home 2)</a></li>
+            <li><a href="services.html">Services & Equipment</a></li>
+            <li><a href="packages.html">Pricing & Packages</a></li>
+            <li><a href="gallery.html">Photo & Video Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Silent Beats</a></li>
+            <li><a href="corporate.html">Corporate Silent Events</a></li>
+            <li><a href="blog.html">Blog & Guides</a></li>
+            <li><a href="contact.html">Contact & Quotes</a></li>
+            <li><a href="dashboard.html">Customer Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="footer-links-list">
+            <li><span style="color: var(--text-muted);"><i data-lucide="map-pin" style="display:inline; width:16px;"></i> 742 Sunset Blvd, Los Angeles, CA</span></li>
+            <li><span style="color: var(--text-muted);"><i data-lucide="phone" style="display:inline; width:16px;"></i> +1 (800) 555-RAVE</span></li>
+            <li><span style="color: var(--text-muted);"><i data-lucide="mail" style="display:inline; width:16px;"></i> rentals@silentbeats.com</span></li>
+            <li><a href="coming-soon.html" style="color: var(--secondary);">VIP Early Access Portal →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Silent Beats Rentals Inc. All rights reserved. Zero Noise, Maximum Vibe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

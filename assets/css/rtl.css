@@ -1,0 +1,83 @@
+/* ==========================================================================
+   SILENT BEATS - RTL OVERRIDES STYLESHEET
+   Supports full bidirectional layout for Arabic/Hebrew and RTL toggling
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] body {
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Global Section Alignment remains centered per Step 3 */
+[dir="rtl"] .section-header,
+[dir="rtl"] .section-header h2,
+[dir="rtl"] .section-header p,
+[dir="rtl"] .section-subtitle,
+[dir="rtl"] .hero,
+[dir="rtl"] .hero-content,
+[dir="rtl"] .card-title,
+[dir="rtl"] .card-desc {
+  text-align: center;
+}
+
+/* Mobile Drawer - Slides from LEFT in RTL */
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: 0;
+  border-left: none;
+  border-right: 1px solid var(--border-color);
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .mobile-drawer.active {
+  transform: translateX(0);
+}
+
+/* Featured Badge Positioning */
+[dir="rtl"] .featured-badge {
+  right: auto;
+  left: 14px;
+}
+
+/* Form Inputs & Groups */
+[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-select,
+[dir="rtl"] .form-textarea {
+  text-align: right;
+}
+
+[dir="rtl"] .dash-table th,
+[dir="rtl"] .dash-table td {
+  text-align: right;
+}
+
+[dir="rtl"] .dash-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+}
+
+[dir="rtl"] .toast-alert {
+  right: auto;
+  left: 24px;
+}
+
+[dir="rtl"] .package-feature-list {
+  text-align: right;
+}
+
+[dir="rtl"] .faq-question {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-links-list a:hover {
+  padding-inline-start: 0;
+  padding-inline-end: 4px;
+}

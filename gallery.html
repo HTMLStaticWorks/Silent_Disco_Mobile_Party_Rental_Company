@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event & Equipment Gallery | Silent Beats Mobile Disco</title>
+  <meta name="description" content="Browse real event photos and videos: glowing 3-channel silent raves, wedding dancefloors, outdoor music festivals, and corporate silent conferences.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVBAR (Step 4)
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-glow"><i data-lucide="headphones"></i></div>
+        Silent<span>Beats</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+          <li><a href="corporate.html" class="nav-link">Corporate</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">⇆</button>
+          <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode"><i data-lucide="sun"></i></button>
+          <a href="login.html" class="btn btn-primary nav-login-btn">Login</a>
+        </div>
+      </nav>
+
+      <button class="hamburger-btn" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <div class="logo-glow"><i data-lucide="headphones"></i></div>
+        Silent<span>Beats</span>
+      </a>
+      <button class="drawer-close-btn" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="drawer-nav-links">
+      <li><a href="index.html" class="drawer-nav-link">Home <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="home2.html" class="drawer-nav-link">Home 2 <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="services.html" class="drawer-nav-link">Services <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="packages.html" class="drawer-nav-link">Packages <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="gallery.html" class="drawer-nav-link active">Gallery <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="corporate.html" class="drawer-nav-link">Corporate <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="blog.html" class="drawer-nav-link">Blog <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="contact.html" class="drawer-nav-link">Contact <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="dashboard.html" class="drawer-nav-link">Dashboard <i data-lucide="chevron-right"></i></a></li>
+    </ul>
+    <div class="drawer-actions">
+      <div class="drawer-action-row">
+        <span>RTL / LTR</span>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">⇆</button>
+      </div>
+      <div class="drawer-action-row">
+        <span>Dark / Light Mode</span>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Theme"><i data-lucide="sun"></i></button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: FILTERABLE GALLERY
+       ========================================================================== -->
+  <main>
+    <section class="section" style="padding-top: calc(var(--space-unit) * 8);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="camera"></i> Visual Showcase</div>
+          <h1>Events & Party Moments</h1>
+          <p class="section-subtitle">Experience the magic of thousands of dancers tuned into 3 glowing channels across diverse venues.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="gallery-filter-tabs">
+          <button class="gallery-tab-btn active" data-filter="all">All Events</button>
+          <button class="gallery-tab-btn" data-filter="weddings">Weddings</button>
+          <button class="gallery-tab-btn" data-filter="festivals">Festivals & Raves</button>
+          <button class="gallery-tab-btn" data-filter="rooftop">Rooftop & Private</button>
+          <button class="gallery-tab-btn" data-filter="corporate">Corporate Summits</button>
+          <button class="gallery-tab-btn" data-filter="equipment">Equipment & Tech</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          <!-- Item 1 -->
+          <div class="gallery-item" data-category="festivals">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" alt="Outdoor Festival Silent Rave" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Electric Forest Afterhours</h4>
+              <span>2,500 Headsets • 3 DJ Stages</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="gallery-item" data-category="weddings">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding Reception Silent Disco" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Coastal Estate Wedding</h4>
+              <span>180 Guests • Curfew-Free Celebration</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="gallery-item" data-category="rooftop">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Downtown Skyline Rooftop Party" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Sunset Horizon Rooftop</h4>
+              <span>350 Guests • 3 Channel Mix</span>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="gallery-item" data-category="corporate">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate Silent Keynote Session" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>SaaS Global Summit 2026</h4>
+              <span>Multi-Track Breakout Audio</span>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="gallery-item" data-category="festivals">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" alt="Dual DJ Battle Nightclub" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Red vs Blue DJ Showdown</h4>
+              <span>Live Cross-Channel Arena</span>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="gallery-item" data-category="equipment">
+            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80" alt="Glowing LED Headset Close-up" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Pro 3-Channel LED Headset</h4>
+              <span>RGB Sync & Neodymium Drivers</span>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="gallery-item" data-category="weddings">
+            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Bride and Groom Silent Rave" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Midnight Vineyard Afterparty</h4>
+              <span>White Bridal Edition Headsets</span>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="gallery-item" data-category="rooftop">
+            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Neon Glow Beach Party" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Miami Beach Full Moon Rave</h4>
+              <span>500 Headsets • Zero Beach Noise</span>
+            </div>
+          </div>
+
+          <!-- Item 9 -->
+          <div class="gallery-item" data-category="equipment">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="UV Laser Light Show Rig" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>GigBAR UV Laser Rig</h4>
+              <span>Sound-Activated Party Lighting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal">
+      <div class="lightbox-content">
+        <button class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+        <img src="" alt="Enlarged Silent Disco Event Photo">
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (Step 10)
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-glow"><i data-lucide="headphones"></i></div>
+            Silent<span>Beats</span>
+          </a>
+          <p>North America's premier 3-channel mobile silent disco and immersive party audio rental company.</p>
+          <div class="footer-social-links">
+            <a href="#" class="icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Festival Edition (Home 2)</a></li>
+            <li><a href="services.html">Services & Equipment</a></li>
+            <li><a href="packages.html">Pricing & Packages</a></li>
+            <li><a href="gallery.html">Photo & Video Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Silent Beats</a></li>
+            <li><a href="corporate.html">Corporate Silent Events</a></li>
+            <li><a href="blog.html">Blog & Guides</a></li>
+            <li><a href="contact.html">Contact & Quotes</a></li>
+            <li><a href="dashboard.html">Customer Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="footer-links-list">
+            <li><span style="color: var(--text-muted);"><i data-lucide="map-pin" style="display:inline; width:16px;"></i> 742 Sunset Blvd, Los Angeles, CA</span></li>
+            <li><span style="color: var(--text-muted);"><i data-lucide="phone" style="display:inline; width:16px;"></i> +1 (800) 555-RAVE</span></li>
+            <li><span style="color: var(--text-muted);"><i data-lucide="mail" style="display:inline; width:16px;"></i> rentals@silentbeats.com</span></li>
+            <li><a href="coming-soon.html" style="color: var(--secondary);">VIP Early Access Portal →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Silent Beats Rentals Inc. All rights reserved. Zero Noise, Maximum Vibe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

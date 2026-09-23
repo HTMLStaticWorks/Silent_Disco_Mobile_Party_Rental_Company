@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Request a Quote | Silent Beats Mobile Disco</title>
+  <meta name="description" content="Get an instant quote for your silent disco rental. Contact the Silent Beats team for custom date reservations, equipment availability, and festival logistics.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVBAR (Step 4)
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-glow"><i data-lucide="headphones"></i></div>
+        Silent<span>Beats</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="corporate.html" class="nav-link">Corporate</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">⇆</button>
+          <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode"><i data-lucide="sun"></i></button>
+          <a href="login.html" class="btn btn-primary nav-login-btn">Login</a>
+        </div>
+      </nav>
+
+      <button class="hamburger-btn" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <div class="logo-glow"><i data-lucide="headphones"></i></div>
+        Silent<span>Beats</span>
+      </a>
+      <button class="drawer-close-btn" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="drawer-nav-links">
+      <li><a href="index.html" class="drawer-nav-link">Home <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="home2.html" class="drawer-nav-link">Home 2 <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="services.html" class="drawer-nav-link">Services <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="packages.html" class="drawer-nav-link">Packages <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="gallery.html" class="drawer-nav-link">Gallery <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="corporate.html" class="drawer-nav-link">Corporate <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="blog.html" class="drawer-nav-link">Blog <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="contact.html" class="drawer-nav-link active">Contact <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="dashboard.html" class="drawer-nav-link">Dashboard <i data-lucide="chevron-right"></i></a></li>
+    </ul>
+    <div class="drawer-actions">
+      <div class="drawer-action-row">
+        <span>RTL / LTR</span>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">⇆</button>
+      </div>
+      <div class="drawer-action-row">
+        <span>Dark / Light Mode</span>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Theme"><i data-lucide="sun"></i></button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: CONTACT & BOOKING REQUEST
+       ========================================================================== -->
+  <main>
+    <section class="section" style="padding-top: calc(var(--space-unit) * 8);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i data-lucide="mail"></i> Get In Touch</div>
+          <h1>Reserve Your Event Date & Request a Quote</h1>
+          <p class="section-subtitle">We reply within 15 minutes during business hours with availability and itemized quotes.</p>
+        </div>
+
+        <div class="card-grid-2">
+          <!-- Form Column -->
+          <div class="feature-card" style="align-items: stretch; text-align: left; padding: calc(var(--space-unit) * 4.5);">
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px; text-align: left;">Event Inquiry & Quote Form</h3>
+
+            <form id="contactQuoteForm" data-validate="true" data-success-msg="Quote request received! Our team is checking gear availability. 🎧">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label class="form-label">Full Name *</label>
+                  <input type="text" class="form-input" required placeholder="Jordan Taylor">
+                  <span class="form-error-msg">Please enter your full name</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" class="form-input" required placeholder="jordan@party.com">
+                  <span class="form-error-msg">Please enter a valid email address</span>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-input" required placeholder="(555) 000-1234">
+                  <span class="form-error-msg">Please enter a phone number</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Target Event Date *</label>
+                  <input type="date" class="form-input" required>
+                  <span class="form-error-msg">Please select an event date</span>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label class="form-label">Expected Guest Count *</label>
+                  <select class="form-select" required>
+                    <option value="">Select guest range...</option>
+                    <option value="25-50">25 – 50 Headsets (Intimate)</option>
+                    <option value="75-150">75 – 150 Headsets (Standard)</option>
+                    <option value="150-300">150 – 300 Headsets (Large)</option>
+                    <option value="500+">500+ Headsets (Mega / Festival)</option>
+                  </select>
+                  <span class="form-error-msg">Please choose estimated headsets</span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Event Category *</label>
+                  <select class="form-select" required>
+                    <option value="">Select event type...</option>
+                    <option value="wedding">Wedding / Reception</option>
+                    <option value="birthday">Birthday / Private House Party</option>
+                    <option value="festival">Music Festival / DJ Rave</option>
+                    <option value="corporate">Corporate Conference / Summit</option>
+                    <option value="college">University / Campus Event</option>
+                  </select>
+                  <span class="form-error-msg">Please select an event type</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Event Details & Specific Requests</label>
+                <textarea class="form-textarea" rows="4" placeholder="Tell us about your venue, DJ requirements, lighting needs, or delivery notes..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-checkbox-label">
+                  <input type="checkbox" required>
+                  <span>I agree to receive event availability and rental quote updates.</span>
+                </label>
+                <span class="form-error-msg">You must accept to submit</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 10px;">
+                <i data-lucide="send"></i> Submit Free Quote Request
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Information & Map Column -->
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            <div class="feature-card" style="align-items: flex-start; text-align: left;">
+              <div class="card-icon"><i data-lucide="phone-call"></i></div>
+              <h3 class="card-title" style="text-align: left; font-size: 1.3rem;">24/7 Rental Hotline</h3>
+              <p class="card-desc" style="text-align: left; margin-bottom: 8px;">
+                Have an urgent party this weekend? Speak directly with a rental coordinator right now.
+              </p>
+              <strong style="font-size: 1.25rem; color: var(--primary);">+1 (800) 555-RAVE (7283)</strong>
+            </div>
+
+            <div class="feature-card" style="align-items: flex-start; text-align: left;">
+              <div class="card-icon"><i data-lucide="map-pin"></i></div>
+              <h3 class="card-title" style="text-align: left; font-size: 1.3rem;">Headquarters & Shipping Depot</h3>
+              <p class="card-desc" style="text-align: left; margin-bottom: 8px;">
+                742 Sunset Blvd, Suite 400<br>
+                Los Angeles, CA 90028<br>
+                <span style="color: var(--secondary); font-size: 0.85rem;">Local courier pickup & nationwide expedited FedEx delivery available.</span>
+              </p>
+            </div>
+
+            <!-- Stylized Interactive Map Placeholder -->
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-main); height: 220px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(9, 7, 20, 0.9) 80%);"></div>
+              <div style="text-align: center; position: relative; z-index: 2;">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; color: #fff; box-shadow: 0 0 20px var(--primary);">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <strong style="color: var(--text-main); font-size: 1rem;">Nationwide Shipping Hub</strong>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">2-Day Guaranteed Delivery Across all 50 States</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (Step 10)
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-glow"><i data-lucide="headphones"></i></div>
+            Silent<span>Beats</span>
+          </a>
+          <p>North America's premier 3-channel mobile silent disco and immersive party audio rental company.</p>
+          <div class="footer-social-links">
+            <a href="#" class="icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="icon-btn" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Festival Edition (Home 2)</a></li>
+            <li><a href="services.html">Services & Equipment</a></li>
+            <li><a href="packages.html">Pricing & Packages</a></li>
+            <li><a href="gallery.html">Photo & Video Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Silent Beats</a></li>
+            <li><a href="corporate.html">Corporate Silent Events</a></li>
+            <li><a href="blog.html">Blog & Guides</a></li>
+            <li><a href="contact.html">Contact & Quotes</a></li>
+            <li><a href="dashboard.html">Customer Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="footer-links-list">
+            <li><span style="color: var(--text-muted);"><i data-lucide="map-pin" style="display:inline; width:16px;"></i> 742 Sunset Blvd, Los Angeles, CA</span></li>
+            <li><span style="color: var(--text-muted);"><i data-lucide="phone" style="display:inline; width:16px;"></i> +1 (800) 555-RAVE</span></li>
+            <li><span style="color: var(--text-muted);"><i data-lucide="mail" style="display:inline; width:16px;"></i> rentals@silentbeats.com</span></li>
+            <li><a href="coming-soon.html" style="color: var(--secondary);">VIP Early Access Portal →</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Silent Beats Rentals Inc. All rights reserved. Zero Noise, Maximum Vibe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

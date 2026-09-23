@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Booking & Equipment Dashboard | Silent Beats</title>
+  <meta name="description" content="Manage your silent disco reservations, track equipment shipping status, customize channel setups, and download invoices in the Silent Beats customer portal.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVBAR (Step 4)
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-glow"><i data-lucide="headphones"></i></div>
+        Silent<span>Beats</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="packages.html" class="nav-link">Packages</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="corporate.html" class="nav-link">Corporate</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">⇆</button>
+          <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode"><i data-lucide="sun"></i></button>
+          <a href="login.html" class="btn btn-primary nav-login-btn">Login</a>
+        </div>
+      </nav>
+
+      <button class="hamburger-btn" aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+        <div class="logo-glow"><i data-lucide="headphones"></i></div>
+        Silent<span>Beats</span>
+      </a>
+      <button class="drawer-close-btn" aria-label="Close Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="drawer-nav-links">
+      <li><a href="index.html" class="drawer-nav-link">Home <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="home2.html" class="drawer-nav-link">Home 2 <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="services.html" class="drawer-nav-link">Services <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="packages.html" class="drawer-nav-link">Packages <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="gallery.html" class="drawer-nav-link">Gallery <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="corporate.html" class="drawer-nav-link">Corporate <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="blog.html" class="drawer-nav-link">Blog <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="contact.html" class="drawer-nav-link">Contact <i data-lucide="chevron-right"></i></a></li>
+      <li><a href="dashboard.html" class="drawer-nav-link active">Dashboard <i data-lucide="chevron-right"></i></a></li>
+    </ul>
+    <div class="drawer-actions">
+      <div class="drawer-action-row">
+        <span>RTL / LTR</span>
+        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">⇆</button>
+      </div>
+      <div class="drawer-action-row">
+        <span>Dark / Light Mode</span>
+        <button class="icon-btn theme-toggle" aria-label="Toggle Theme"><i data-lucide="sun"></i></button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       DASHBOARD MAIN LAYOUT
+       ========================================================================== -->
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; padding-inline: 8px;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; font-weight: var(--weight-bold-inline); color: #fff;">
+            JD
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.95rem;">Jordan Davis</strong>
+            <span style="font-size: 0.78rem; color: var(--secondary);">VIP Host Account</span>
+          </div>
+        </div>
+
+        <ul class="dash-menu">
+          <li class="dash-menu-item active" data-tab="overview">
+            <i data-lucide="layout-dashboard"></i> Overview
+          </li>
+          <li class="dash-menu-item" data-tab="reservations">
+            <i data-lucide="calendar-days"></i> Reservations & Equipment
+          </li>
+          <li class="dash-menu-item" data-tab="packages">
+            <i data-lucide="package-search"></i> Package Options
+          </li>
+          <li class="dash-menu-item" data-tab="invoices">
+            <i data-lucide="receipt"></i> Invoices & Payments
+          </li>
+          <li class="dash-menu-item" data-tab="settings">
+            <i data-lucide="settings"></i> Profile & Address
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <button id="btnNewBooking" class="btn btn-primary" style="width: 100%; margin-bottom: 12px;">
+          <i data-lucide="plus-circle"></i> New Reservation
+        </button>
+        <a href="login.html" class="dash-menu-item" style="color: var(--error);">
+          <i data-lucide="log-out"></i> Sign Out
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main-content">
+      <!-- TAB 1: OVERVIEW -->
+      <div class="dash-tab-pane" id="tab-overview">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h1 style="font-size: 2rem;">Customer Portal Overview</h1>
+            <p>Welcome back, Jordan! Here is the live status of your party sound gear.</p>
+          </div>
+          <!-- Live Countdown Widget -->
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-glow); padding: 10px 18px; border-radius: var(--radius-btn); text-align: right;">
+            <span style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase;">Next Rave Countdown:</span>
+            <div id="eventCountdown" style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: var(--weight-h3); color: var(--primary);">14d 06h 24m 10s</div>
+          </div>
+        </div>
+
+        <!-- KPI Cards Grid -->
+        <div class="dash-kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon"><i data-lucide="headphones"></i></div>
+            <div>
+              <div class="kpi-value">125</div>
+              <div class="kpi-label">Active Headsets Reserved</div>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" style="color: var(--secondary); background: rgba(6, 182, 212, 0.15);"><i data-lucide="truck"></i></div>
+            <div>
+              <div class="kpi-value">In Transit</div>
+              <div class="kpi-label">FedEx #940010920239</div>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" style="color: var(--accent); background: rgba(236, 72, 153, 0.15);"><i data-lucide="calendar-check"></i></div>
+            <div>
+              <div class="kpi-value">Oct 17</div>
+              <div class="kpi-label">Next Event Date</div>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" style="color: var(--success); background: rgba(16, 185, 129, 0.15);"><i data-lucide="shield-check"></i></div>
+            <div>
+              <div class="kpi-value">Paid</div>
+              <div class="kpi-label">Deposit & Balance Clear</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Reservation Tracker Table -->
+        <div class="dash-table-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <h3 style="font-size: 1.35rem;">Upcoming & Active Reservations</h3>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Real-time equipment tracking</span>
+          </div>
+
+          <table class="dash-table" id="reservationsTable">
+            <thead>
+              <tr>
+                <th>Booking Ref</th>
+                <th>Event Date</th>
+                <th>Equipment Details</th>
+                <th>Status</th>
+                <th>Total</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>#SB-89241</strong></td>
+                <td>Oct 17, 2026</td>
+                <td>125x LED Headsets + 3 Transmitters + UV Rig</td>
+                <td><span class="status-badge status-in-transit"><i data-lucide="truck"></i> In Transit (Arriving Oct 15)</span></td>
+                <td>$589.00</td>
+                <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice #SB-89241 PDF...')">Invoice</button></td>
+              </tr>
+              <tr>
+                <td><strong>#SB-77190</strong></td>
+                <td>Nov 05, 2026</td>
+                <td>50x Headsets (Intimate Rooftop Package)</td>
+                <td><span class="status-badge status-confirmed"><i data-lucide="check-circle"></i> Confirmed & Testing</span></td>
+                <td>$249.00</td>
+                <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice #SB-77190 PDF...')">Invoice</button></td>
+              </tr>
+              <tr>
+                <td><strong>#SB-62045</strong></td>
+                <td>Aug 14, 2026</td>
+                <td>100x Headsets (Summer Beach Rave)</td>
+                <td><span class="status-badge status-confirmed" style="color: var(--text-dim); background: rgba(255,255,255,0.05);"><i data-lucide="archive"></i> Completed & Returned</span></td>
+                <td>$499.00</td>
+                <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading Receipt #SB-62045...')">Receipt</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 2: RESERVATIONS & EQUIPMENT STATUS -->
+      <div class="dash-tab-pane" id="tab-reservations" style="display: none;">
+        <h2 style="margin-bottom: 8px;">Equipment Tracking & Live Hardware Health</h2>
+        <p style="margin-bottom: 24px;">Monitor shipment tracking numbers, return label barcodes, and headset battery health reports.</p>
+
+        <div class="card-grid-3" style="margin-bottom: 32px;">
+          <div class="feature-card">
+            <div class="card-icon"><i data-lucide="package"></i></div>
+            <h3 class="card-title">Outbound Delivery</h3>
+            <p class="card-desc">Crate 1 & 2 dispatched via FedEx Priority. Guaranteed doorstep delivery 2 business days before your event.</p>
+            <span class="status-badge status-in-transit">Tracking: 9400 1092 0239 8812</span>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon"><i data-lucide="battery-charging"></i></div>
+            <h3 class="card-title">Battery & Quality Tested</h3>
+            <p class="card-desc">All 125 headsets passed 100% lithium charge capacity testing and UV-C sterilization on Oct 12.</p>
+            <span class="status-badge status-confirmed">QC Passed ✔</span>
+          </div>
+
+          <div class="feature-card">
+            <div class="card-icon"><i data-lucide="rotate-ccw"></i></div>
+            <h3 class="card-title">Prepaid Return Label</h3>
+            <p class="card-desc">Peel-and-stick return label is inside pocket #1 of the transport box for easy post-party courier drop-off.</p>
+            <span class="status-badge status-pending">Ready for Return Drop</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: PACKAGE OPTIONS -->
+      <div class="dash-tab-pane" id="tab-packages" style="display: none;">
+        <h2 style="margin-bottom: 8px;">Explore Package Upgrades & Add-ons</h2>
+        <p style="margin-bottom: 24px;">Upgrade existing reservations or add extra transmitters, laser lighting, and wireless microphones.</p>
+
+        <div class="card-grid-3">
+          <div class="package-card">
+            <h3 class="card-title">Add 50 Headsets</h3>
+            <p class="card-desc">Expecting more guests? Add extra headsets to any existing active order.</p>
+            <div class="package-price">$175 <span>/ flat add-on</span></div>
+            <button class="btn btn-secondary" onclick="alert('50 Headsets added to pending order!')">Add to Order</button>
+          </div>
+
+          <div class="package-card featured">
+            <div class="featured-badge">Party Boost</div>
+            <h3 class="card-title">UV Glow & Laser Rig</h3>
+            <p class="card-desc">GigBAR 4-in-1 lighting bar with sound-reactive RGB strobes & UV blacklights.</p>
+            <div class="package-price">$95 <span>/ flat add-on</span></div>
+            <button class="btn btn-primary" onclick="alert('Lighting Rig added to pending order!')">Add to Order</button>
+          </div>
+
+          <div class="package-card">
+            <h3 class="card-title">Wireless MC Microphone</h3>
+            <p class="card-desc">Direct transmitter broadcast mic for announcements, wedding toasts, and DJ hype.</p>
+            <div class="package-price">$45 <span>/ flat add-on</span></div>
+            <button class="btn btn-secondary" onclick="alert('Wireless Mic added to pending order!')">Add to Order</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: INVOICES -->
+      <div class="dash-tab-pane" id="tab-invoices" style="display: none;">
+        <h2 style="margin-bottom: 8px;">Invoices & Billing History</h2>
+        <p style="margin-bottom: 24px;">View, print, and download PDF receipts for all party rentals and corporate bookings.</p>
+
+        <div class="dash-table-card">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Invoice #</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Payment Method</th>
+                <th>Status</th>
+                <th>PDF</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>INV-2026-089</td>
+                <td>Oct 10, 2026</td>
+                <td>$589.00</td>
+                <td>Visa •••• 4242</td>
+                <td><span class="status-badge status-confirmed">Paid in Full</span></td>
+                <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice INV-2026-089...')">Download</button></td>
+              </tr>
+              <tr>
+                <td>INV-2026-071</td>
+                <td>Sep 28, 2026</td>
+                <td>$249.00</td>
+                <td>Mastercard •••• 8819</td>
+                <td><span class="status-badge status-confirmed">Paid in Full</span></td>
+                <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice INV-2026-071...')">Download</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 5: SETTINGS -->
+      <div class="dash-tab-pane" id="tab-settings" style="display: none;">
+        <h2 style="margin-bottom: 8px;">Account & Shipping Profile</h2>
+        <p style="margin-bottom: 24px;">Manage delivery addresses, notification preferences, and contact information.</p>
+
+        <div class="feature-card" style="align-items: stretch; text-align: left; max-width: 680px;">
+          <form data-validate="true" data-success-msg="Profile and shipping address updated! 📦">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-input" value="Jordan Davis" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-input" value="jordan@partyvibes.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Shipping Street Address</label>
+              <input type="text" class="form-input" value="842 Grand Avenue, Apt 4B" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label">City</label>
+                <input type="text" class="form-input" value="Los Angeles" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">State</label>
+                <input type="text" class="form-input" value="CA" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Zip Code</label>
+                <input type="text" class="form-input" value="90015" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: 12px;"><i data-lucide="save"></i> Save Profile Details</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: NEW RESERVATION CREATOR
+       ========================================================================== -->
+  <div id="bookingModal" style="display: none; position: fixed; inset: 0; background: rgba(9, 7, 20, 0.85); backdrop-filter: blur(8px); z-index: 2500; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: var(--bg-surface); border: 1px solid var(--border-glow); border-radius: var(--radius-main); max-width: 540px; width: 100%; padding: 32px; box-shadow: var(--shadow-glow); position: relative;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 style="font-size: 1.4rem;">Book New Equipment Rental</h3>
+        <button id="closeModalBtn" style="background: transparent; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer;">&times;</button>
+      </div>
+
+      <form id="newBookingForm">
+        <div class="form-group">
+          <label class="form-label">Event Date</label>
+          <input type="date" id="modalEventDate" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between;">
+            <label class="form-label">Headset Count</label>
+            <span id="modalHeadsetCountText" style="color: var(--primary);">50 Headsets</span>
+          </div>
+          <input type="range" id="modalGuestCount" min="25" max="500" step="25" value="50" class="range-slider" oninput="document.getElementById('modalHeadsetCountText').textContent = this.value + ' Headsets'">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">DJ & Package Type</label>
+          <select class="form-select">
+            <option>3-Channel Standard Party Pack (3 Transmitters)</option>
+            <option>Dual DJ Battle Stage Rig</option>
+            <option>Wedding Silent Rave & Bridal Pack</option>
+            <option>Corporate Multi-Track Summit Pack</option>
+          </select>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+          <div>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Estimated Total:</span>
+            <div id="modalTotalPrice" style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--text-main); font-weight: var(--weight-h2);">$380.00</div>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button type="button" id="cancelModalBtn" class="btn btn-secondary btn-sm">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-sm"><i data-lucide="check"></i> Confirm Reservation</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
