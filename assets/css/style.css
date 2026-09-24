@@ -502,7 +502,6 @@ img {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   transform: translateX(100%);
   visibility: hidden;
   pointer-events: none;
@@ -578,6 +577,7 @@ img {
   gap: 12px;
   padding-top: 16px;
   border-top: 1px solid var(--border-color);
+  margin-top: auto;
 }
 
 .drawer-action-row {
@@ -1373,6 +1373,26 @@ canvas#visualizerCanvas {
   flex-shrink: 0;
 }
 
+.package-card .card-title {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.package-card .card-desc {
+  flex-grow: 0;
+  min-height: 80px;
+}
+
+.package-card .package-feature-list {
+  flex-grow: 1;
+}
+
+.package-card .btn {
+  margin-top: auto;
+}
+
 /* Interactive Package Calculator */
 .calc-box {
   background: var(--bg-surface);
@@ -1671,8 +1691,8 @@ input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
-  filter: invert(1) brightness(1.2);
-  opacity: 0.92;
+  filter: brightness(1.2);
+  opacity: 0.85;
   transition: var(--transition);
   padding: 4px;
   border-radius: 4px;
@@ -1682,7 +1702,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover,
 input[type="time"]::-webkit-calendar-picker-indicator:hover,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
   opacity: 1;
-  filter: invert(1) brightness(1.5) drop-shadow(0 0 5px var(--primary));
+  filter: brightness(1.5) drop-shadow(0 0 5px var(--primary));
   transform: scale(1.12);
 }
 
@@ -1758,6 +1778,8 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
 .contact-info-card {
   align-items: flex-start;
   text-align: left;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .contact-info-card .card-title {

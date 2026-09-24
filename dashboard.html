@@ -26,8 +26,6 @@
 
       <div class="dash-header-right">
         <div class="dash-nav-actions">
-          <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">⇆</button>
-          <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode"><i data-lucide="sun"></i></button>
           <button class="hamburger-btn dash-hamburger-btn" id="dashHamburgerBtn" aria-label="Open Dashboard Menu" title="Open Dashboard Menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
           </button>
@@ -89,23 +87,14 @@
           <i data-lucide="plus-circle"></i> New Reservation
         </button>
 
-        <!-- Main Website Navigation inside Mobile Drawer -->
-        <div class="dash-drawer-site-nav">
-          <div class="dash-site-nav-heading">Website Pages</div>
-          <ul class="dash-site-links">
-            <li><a href="index.html" class="dash-site-link"><i data-lucide="home"></i> Home</a></li>
-            <li><a href="home2.html" class="dash-site-link"><i data-lucide="sparkles"></i> Home 2</a></li>
-            <li><a href="services.html" class="dash-site-link"><i data-lucide="headphones"></i> Services & Equipment</a></li>
-            <li><a href="packages.html" class="dash-site-link"><i data-lucide="tag"></i> Packages & Pricing</a></li>
-            <li><a href="gallery.html" class="dash-site-link"><i data-lucide="image"></i> Gallery</a></li>
-            <li><a href="corporate.html" class="dash-site-link"><i data-lucide="briefcase"></i> Corporate</a></li>
-            <li><a href="blog.html" class="dash-site-link"><i data-lucide="newspaper"></i> Blog</a></li>
-            <li><a href="contact.html" class="dash-site-link"><i data-lucide="mail"></i> Contact</a></li>
-          </ul>
-        </div>
+
       </div>
 
       <div class="dash-sidebar-bottom">
+        <div style="display: flex; gap: 12px; margin-bottom: 16px; padding: 0 16px;">
+          <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL" style="background: var(--bg-surface);">⇆</button>
+          <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode" style="background: var(--bg-surface);"><i data-lucide="sun"></i></button>
+        </div>
         <a href="login.html" class="dash-menu-item" style="color: var(--error);">
           <i data-lucide="log-out"></i> Sign Out
         </a>

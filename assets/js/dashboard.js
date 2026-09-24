@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const activePane = document.getElementById(`tab-${targetTab}`);
         if (activePane) {
           activePane.style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         // Auto-close drawer on mobile / tablet after switching tab

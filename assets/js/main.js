@@ -375,9 +375,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Handle Auth Redirect simulation
         if (form.id === 'loginForm') {
-          setTimeout(() => { window.location.href = 'dashboard.html'; }, 1000);
+          setTimeout(() => { window.location.href = 'index.html'; }, 1000);
         } else if (form.id === 'registerForm') {
-          setTimeout(() => { window.location.href = 'dashboard.html'; }, 1000);
+          setTimeout(() => { window.location.href = 'index.html'; }, 1000);
         } else {
           form.reset();
           requiredInputs.forEach(input => input.classList.remove('is-valid'));
