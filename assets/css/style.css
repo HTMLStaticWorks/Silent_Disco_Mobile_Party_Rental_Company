@@ -1758,6 +1758,67 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
   margin-top: 3px;
   accent-color: var(--primary);
 }
+
+/* ==========================================================================
+   PASSWORD INPUT WITH VISIBILITY TOGGLE (Eye Icon)
+   ========================================================================== */
+.password-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input-wrap .form-input {
+  width: 100%;
+  padding-right: 44px;
+  padding-inline-end: 44px;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 8px;
+  inset-inline-end: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  color: var(--text-dim);
+  cursor: pointer;
+  border-radius: var(--radius-btn);
+  transition: color var(--transition), background-color var(--transition), transform 0.15s ease;
+  line-height: 0;
+  z-index: 2;
+  user-select: none;
+}
+
+.password-toggle-btn:hover {
+  color: var(--primary);
+  background: rgba(139, 92, 246, 0.14);
+}
+
+.password-toggle-btn:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.password-toggle-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  color: var(--primary);
+}
+
+.password-toggle-btn svg,
+.password-toggle-btn i {
+  width: 18px;
+  height: 18px;
+  display: block;
+  stroke: currentColor;
+}
+
 /* ==========================================================================
    CONTACT PAGE: CARDS, SOCIAL MEDIA BUTTONS & FULL HORIZONTAL MAP
    ========================================================================== */

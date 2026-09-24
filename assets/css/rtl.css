@@ -58,6 +58,16 @@
   text-align: right;
 }
 
+[dir="rtl"] .password-input-wrap .form-input {
+  padding-right: 16px;
+  padding-left: 44px;
+}
+
+[dir="rtl"] .password-toggle-btn {
+  right: auto;
+  left: 8px;
+}
+
 [dir="rtl"] .dash-table th,
 [dir="rtl"] .dash-table td {
   text-align: right;

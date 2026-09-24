@@ -38,7 +38,12 @@
 
         <div class="form-group" style="margin-bottom: 12px;">
           <label class="form-label" for="password">Password</label>
-          <input type="password" id="password" class="form-input" required minlength="8" placeholder="••••••••">
+          <div class="password-input-wrap">
+            <input type="password" id="password" class="form-input" required minlength="8" placeholder="••••••••" autocomplete="current-password">
+            <button type="button" class="password-toggle-btn" aria-label="Show password" title="Show password" aria-pressed="false">
+              <i data-lucide="eye"></i>
+            </button>
+          </div>
           <span class="form-error-msg">Password must be at least 8 characters</span>
         </div>
 
