@@ -5,6 +5,42 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Dashboard Mobile Drawer Toggle (<= 1024px)
+  const dashHamburgerBtn = document.getElementById('dashHamburgerBtn');
+  const dashDrawerCloseBtn = document.getElementById('dashDrawerCloseBtn');
+  const dashDrawerOverlay = document.getElementById('dashDrawerOverlay');
+  const dashSidebar = document.getElementById('dashSidebar');
+
+  function openDashDrawer() {
+    if (dashSidebar && dashDrawerOverlay) {
+      dashSidebar.classList.add('active');
+      dashDrawerOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeDashDrawer() {
+    if (dashSidebar && dashDrawerOverlay) {
+      dashSidebar.classList.remove('active');
+      dashDrawerOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (dashHamburgerBtn) dashHamburgerBtn.addEventListener('click', openDashDrawer);
+  if (dashDrawerCloseBtn) dashDrawerCloseBtn.addEventListener('click', closeDashDrawer);
+  if (dashDrawerOverlay) dashDrawerOverlay.addEventListener('click', closeDashDrawer);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDashDrawer();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) {
+      closeDashDrawer();
+    }
+  });
+
   // Tab Navigation
   const menuItems = document.querySelectorAll('.dash-menu-item[data-tab]');
   const tabPanes = document.querySelectorAll('.dash-tab-pane');
@@ -21,6 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const activePane = document.getElementById(`tab-${targetTab}`);
         if (activePane) {
           activePane.style.display = 'block';
+        }
+
+        // Auto-close drawer on mobile / tablet after switching tab
+        if (window.innerWidth <= 1024) {
+          closeDashDrawer();
         }
       });
     });
@@ -71,12 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const eventDate = document.getElementById('modalEventDate')?.value || '2026-10-15';
         const headsets = modalGuestCount ? modalGuestCount.value : '50';
         row.innerHTML = `
-          <td><strong>${orderId}</strong></td>
-          <td>${eventDate}</td>
-          <td>${headsets} LED Headsets (3-Ch)</td>
-          <td><span class="status-badge status-confirmed"><i data-lucide="check-circle"></i> Confirmed</span></td>
-          <td>${modalTotalPrice?.textContent || '$380.00'}</td>
-          <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading invoice for ${orderId}...')">Invoice</button></td>
+          <td class="col-ref"><strong>${orderId}</strong></td>
+          <td class="col-date">${eventDate}</td>
+          <td class="col-details">${headsets} LED Headsets (3-Ch)</td>
+          <td class="col-status"><span class="status-badge status-confirmed"><i data-lucide="check-circle"></i> Confirmed</span></td>
+          <td class="col-total"><strong>${modalTotalPrice?.textContent || '$380.00'}</strong></td>
+          <td class="col-action"><button class="btn btn-outline btn-sm" onclick="alert('Downloading invoice for ${orderId}...')">Invoice</button></td>
         `;
         tableBody.prepend(row);
         if (window.lucide) window.lucide.createIcons();

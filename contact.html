@@ -97,11 +97,11 @@
 
         <div class="card-grid-2">
           <!-- Form Column -->
-          <div class="feature-card" style="align-items: stretch; text-align: left; padding: calc(var(--space-unit) * 4.5);">
-            <h3 style="font-size: 1.5rem; margin-bottom: 20px; text-align: left;">Event Inquiry & Quote Form</h3>
+          <div class="feature-card contact-form-card">
+            <h3 class="contact-form-title">Event Inquiry & Quote Form</h3>
 
             <form id="contactQuoteForm" data-validate="true" data-success-msg="Quote request received! Our team is checking gear availability. 🎧">
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-grid-2">
                 <div class="form-group">
                   <label class="form-label">Full Name *</label>
                   <input type="text" class="form-input" required placeholder="Jordan Taylor">
@@ -115,7 +115,7 @@
                 </div>
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-grid-2">
                 <div class="form-group">
                   <label class="form-label">Phone Number *</label>
                   <input type="tel" class="form-input" required placeholder="(555) 000-1234">
@@ -129,7 +129,7 @@
                 </div>
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-grid-2">
                 <div class="form-group">
                   <label class="form-label">Expected Guest Count *</label>
                   <select class="form-select" required>
@@ -177,35 +177,84 @@
 
           <!-- Contact Information & Map Column -->
           <div style="display: flex; flex-direction: column; gap: 24px;">
-            <div class="feature-card" style="align-items: flex-start; text-align: left;">
+            <div class="feature-card contact-info-card">
               <div class="card-icon"><i data-lucide="phone-call"></i></div>
-              <h3 class="card-title" style="text-align: left; font-size: 1.3rem;">24/7 Rental Hotline</h3>
-              <p class="card-desc" style="text-align: left; margin-bottom: 8px;">
+              <h3 class="card-title">24/7 Rental Hotline</h3>
+              <p class="card-desc">
                 Have an urgent party this weekend? Speak directly with a rental coordinator right now.
               </p>
-              <strong style="font-size: 1.25rem; color: var(--primary);">+1 (800) 555-RAVE (7283)</strong>
+              <strong class="contact-phone-number">+1 (800) 555-RAVE (7283)</strong>
             </div>
 
-            <div class="feature-card" style="align-items: flex-start; text-align: left;">
+            <div class="feature-card contact-info-card">
               <div class="card-icon"><i data-lucide="map-pin"></i></div>
-              <h3 class="card-title" style="text-align: left; font-size: 1.3rem;">Headquarters & Shipping Depot</h3>
-              <p class="card-desc" style="text-align: left; margin-bottom: 8px;">
+              <h3 class="card-title">Headquarters & Shipping Depot</h3>
+              <p class="card-desc">
                 742 Sunset Blvd, Suite 400<br>
                 Los Angeles, CA 90028<br>
-                <span style="color: var(--secondary); font-size: 0.85rem;">Local courier pickup & nationwide expedited FedEx delivery available.</span>
+                <span class="depot-note">Local courier pickup & nationwide expedited FedEx delivery available.</span>
               </p>
             </div>
 
-            <!-- Stylized Interactive Map Placeholder -->
-            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-main); height: 220px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-              <div style="position: absolute; inset: 0; background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(9, 7, 20, 0.9) 80%);"></div>
-              <div style="text-align: center; position: relative; z-index: 2;">
-                <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto; color: #fff; box-shadow: 0 0 20px var(--primary);">
-                  <i data-lucide="map-pin"></i>
-                </div>
-                <strong style="color: var(--text-main); font-size: 1rem;">Nationwide Shipping Hub</strong>
-                <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0;">2-Day Guaranteed Delivery Across all 50 States</p>
+            <!-- Social Media Channels Card (Replaces Squeezed Map Box) -->
+            <div class="feature-card contact-info-card">
+              <div class="card-icon"><i data-lucide="share-2"></i></div>
+              <h3 class="card-title">Connect on Social Media</h3>
+              <p class="card-desc">
+                Follow our nationwide tour popups, watch live DJ battle clips, and DM our team for quick questions.
+              </p>
+              <div class="social-buttons-grid">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn social-instagram" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                  <span>Instagram</span>
+                </a>
+                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-btn social-tiktok" aria-label="TikTok">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.3 6.3 0 0 0 1.87-4.49V8.69a8.18 8.18 0 0 0 4.9 1.62v-3.62h-1z"/></svg>
+                  <span>TikTok</span>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn social-youtube" aria-label="YouTube">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>YouTube</span>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn social-facebook" aria-label="Facebook">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  <span>Facebook</span>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn social-x" aria-label="X (formerly Twitter)">
+                  <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  <span>𝕏 (Twitter)</span>
+                </a>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================================================================
+             FULL HORIZONTAL PROPER MAP SECTION
+             ================================================================== -->
+        <div class="contact-map-horizontal">
+          <div class="map-container-card">
+            <div class="map-card-header">
+              <div class="map-header-info">
+                <span class="section-tag" style="margin-bottom: 6px;"><i data-lucide="map-pin"></i> Live Headquarters & Depot</span>
+                <h3 class="map-header-title">Interactive Location & Directions</h3>
+                <p class="map-header-desc">742 Sunset Blvd, Suite 400, Los Angeles, CA 90028 • Open Mon–Sat 8:00 AM – 9:00 PM PST</p>
+              </div>
+              <a href="https://maps.google.com/?q=742+Sunset+Blvd,+Los+Angeles,+CA+90028" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i data-lucide="external-link"></i> Open in Google Maps
+              </a>
+            </div>
+            <div class="map-iframe-wrap">
+              <iframe
+                title="Silent Beats Headquarters & Distribution Depot Location Map"
+                src="https://maps.google.com/maps?q=742+Sunset+Blvd,+Los+Angeles,+CA+90028&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="420"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
             </div>
           </div>
         </div>
@@ -235,8 +284,8 @@
             <a href="#" class="icon-btn" aria-label="Facebook">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-            <a href="#" class="icon-btn" aria-label="Twitter">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            <a href="#" class="icon-btn" aria-label="X (formerly Twitter)" title="X (Twitter)">
+              <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
           </div>
         </div>
@@ -276,9 +325,15 @@
 
       <div class="footer-bottom">
         <p>© 2026 Silent Beats Rentals Inc. All rights reserved. Zero Noise, Maximum Vibe.</p>
+        <button class="footer-back-to-top" aria-label="Back to Top"><i data-lucide="arrow-up"></i> Back to Top</button>
       </div>
     </div>
   </footer>
+
+  <!-- Floating Back to Top Button (All Devices) -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
 
   <script src="assets/js/main.js"></script>
 </body>

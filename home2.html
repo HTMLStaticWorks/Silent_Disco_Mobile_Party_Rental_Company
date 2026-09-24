@@ -87,7 +87,8 @@
        HERO 2: FESTIVAL & RAVE EDITION
        ========================================================================== -->
   <main>
-    <section class="hero" style="background: radial-gradient(circle at 50% 20%, rgba(236, 72, 153, 0.15) 0%, transparent 60%);">
+    <section class="hero hero-home2">
+      <div class="hero-glow-bg"></div>
       <div class="container hero-content">
         <div class="section-tag" style="background: rgba(236, 72, 153, 0.15); color: var(--accent); border-color: rgba(236, 72, 153, 0.3);">
           <i data-lucide="flame"></i> Festival & DJ Battle Edition
@@ -122,25 +123,25 @@
           <div class="mixer-grid">
             <!-- Deck A: DJ Blue -->
             <div class="dj-side deck-a" id="deckAIndicator">
-              <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--ch-blue);">
+              <div class="dj-deck-header">
                 <i data-lucide="disc-3"></i>
-                <h3 style="font-size: 1.25rem;">Stage Blue: DJ Neon</h3>
+                <h3 class="dj-deck-title">Stage Blue: DJ Neon</h3>
               </div>
               <div class="turntable-disc" style="box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);"></div>
-              <p style="font-size: 0.85rem; color: #93c5fd;">Bass House / Tech Trance (128 BPM)</p>
+              <p class="deck-track-info">Bass House / Tech Trance (128 BPM)</p>
             </div>
 
             <!-- Mixer Center -->
             <div class="crossfader-container">
-              <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);">Crossfader</span>
+              <span class="crossfader-label">Crossfader</span>
               <input type="range" min="0" max="100" value="50" class="crossfader-slider" id="djCrossfader">
-              <div style="display: flex; justify-content: space-between; width: 100%; font-size: 0.75rem; color: var(--text-dim);">
+              <div class="crossfader-indicator">
                 <span>← DECK A</span>
                 <span>DECK B →</span>
               </div>
 
               <!-- Sound FX Triggers -->
-              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 14px; width: 100%;">
+              <div class="sfx-grid">
                 <button class="btn btn-outline btn-sm sfx-btn">💥 Drop Bass</button>
                 <button class="btn btn-outline btn-sm sfx-btn">🚨 Airhorn</button>
                 <button class="btn btn-outline btn-sm sfx-btn">⚡ Laser FX</button>
@@ -150,12 +151,12 @@
 
             <!-- Deck B: DJ Red -->
             <div class="dj-side deck-b" id="deckBIndicator">
-              <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--ch-red);">
+              <div class="dj-deck-header">
                 <i data-lucide="disc-3"></i>
-                <h3 style="font-size: 1.25rem;">Stage Red: DJ Blaze</h3>
+                <h3 class="dj-deck-title">Stage Red: DJ Blaze</h3>
               </div>
               <div class="turntable-disc" style="box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);"></div>
-              <p style="font-size: 0.85rem; color: #fca5a5;">Old School Hip-Hop / 90s Trap (95 BPM)</p>
+              <p class="deck-track-info">Old School Hip-Hop / 90s Trap (95 BPM)</p>
             </div>
           </div>
         </div>
@@ -284,8 +285,8 @@
             <a href="#" class="icon-btn" aria-label="Facebook">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-            <a href="#" class="icon-btn" aria-label="Twitter">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            <a href="#" class="icon-btn" aria-label="X (formerly Twitter)" title="X (Twitter)">
+              <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
           </div>
         </div>
@@ -325,9 +326,15 @@
 
       <div class="footer-bottom">
         <p>© 2026 Silent Beats Rentals Inc. All rights reserved. Zero Noise, Maximum Vibe.</p>
+        <button class="footer-back-to-top" aria-label="Back to Top"><i data-lucide="arrow-up"></i> Back to Top</button>
       </div>
     </div>
   </footer>
+
+  <!-- Floating Back to Top Button (All Devices) -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
 
   <script src="assets/js/main.js"></script>
 </body>

@@ -48,10 +48,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const rtlToggles = document.querySelectorAll('.rtl-toggle');
   rtlToggles.forEach(btn => {
     btn.addEventListener('click', () => {
+      // Temporarily freeze transitions to eliminate hamburger menu / drawer flashing
+      document.documentElement.classList.add('no-transition');
+      const allDrawers = document.querySelectorAll('.mobile-drawer, .dash-sidebar');
+      allDrawers.forEach(d => { d.style.transition = 'none'; });
+
       const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
       const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
       document.documentElement.setAttribute('dir', newDir);
       localStorage.setItem('silentbeats_dir', newDir);
+
+      // Restore transitions smoothly on next animation frame
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          document.documentElement.classList.remove('no-transition');
+          allDrawers.forEach(d => { d.style.transition = ''; });
+        });
+      });
     });
   });
 
@@ -401,4 +414,48 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.showToast = showToast;
+
+  /* --------------------------------------------------------------------------
+     11. BACK TO TOP CONTROLLER (ALL DEVICES)
+     -------------------------------------------------------------------------- */
+  let backToTopBtn = document.getElementById('backToTopBtn');
+  if (!backToTopBtn) {
+    backToTopBtn = document.createElement('button');
+    backToTopBtn.id = 'backToTopBtn';
+    backToTopBtn.className = 'back-to-top';
+    backToTopBtn.setAttribute('aria-label', 'Back to top');
+    backToTopBtn.setAttribute('title', 'Back to top');
+    backToTopBtn.innerHTML = '<i data-lucide="arrow-up"></i>';
+    document.body.appendChild(backToTopBtn);
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  function toggleBackToTop() {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  toggleBackToTop();
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // Footer inline back to top buttons
+  document.querySelectorAll('.footer-back-to-top, [data-action="back-to-top"]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
 });

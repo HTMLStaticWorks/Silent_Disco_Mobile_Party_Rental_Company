@@ -13,90 +13,57 @@
 <body>
 
   <!-- ==========================================================================
-       HEADER & NAVBAR (Step 4)
+       DASHBOARD HEADER & NAVBAR (Portal Logo, Theme & RTL Toggles Only)
        ========================================================================== -->
-  <header class="header">
-    <div class="container header-container">
-      <a href="index.html" class="logo">
-        <div class="logo-glow"><i data-lucide="headphones"></i></div>
-        Silent<span>Beats</span>
-      </a>
+  <header class="header dashboard-header">
+    <div class="dashboard-header-container">
+      <div class="dash-brand-wrapper">
+        <a href="index.html" class="logo">
+          <div class="logo-glow"><i data-lucide="headphones"></i></div>
+          Silent<span>Beats</span>
+        </a>
+      </div>
 
-      <nav class="nav-desktop">
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="home2.html" class="nav-link">Home 2</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="packages.html" class="nav-link">Packages</a></li>
-          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-          <li><a href="corporate.html" class="nav-link">Corporate</a></li>
-          <li><a href="blog.html" class="nav-link">Blog</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
-        </ul>
-        <div class="nav-actions">
+      <div class="dash-header-right">
+        <div class="dash-nav-actions">
           <button class="icon-btn rtl-toggle" aria-label="Toggle RTL" title="Toggle RTL">⇆</button>
           <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Dark/Light Mode"><i data-lucide="sun"></i></button>
-          <a href="login.html" class="btn btn-primary nav-login-btn">Login</a>
+          <button class="hamburger-btn dash-hamburger-btn" id="dashHamburgerBtn" aria-label="Open Dashboard Menu" title="Open Dashboard Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
         </div>
-      </nav>
-
-      <button class="hamburger-btn" aria-label="Open Navigation Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-      </button>
+      </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer Overlay & Drawer -->
-  <div class="mobile-drawer-overlay"></div>
-  <aside class="mobile-drawer">
-    <div class="drawer-header">
-      <a href="index.html" class="logo">
-        <div class="logo-glow"><i data-lucide="headphones"></i></div>
-        Silent<span>Beats</span>
-      </a>
-      <button class="drawer-close-btn" aria-label="Close Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
-      </button>
-    </div>
-    <ul class="drawer-nav-links">
-      <li><a href="index.html" class="drawer-nav-link">Home <i data-lucide="chevron-right"></i></a></li>
-      <li><a href="home2.html" class="drawer-nav-link">Home 2 <i data-lucide="chevron-right"></i></a></li>
-      <li><a href="services.html" class="drawer-nav-link">Services <i data-lucide="chevron-right"></i></a></li>
-      <li><a href="packages.html" class="drawer-nav-link">Packages <i data-lucide="chevron-right"></i></a></li>
-      <li><a href="gallery.html" class="drawer-nav-link">Gallery <i data-lucide="chevron-right"></i></a></li>
-      <li><a href="corporate.html" class="drawer-nav-link">Corporate <i data-lucide="chevron-right"></i></a></li>
-      <li><a href="blog.html" class="drawer-nav-link">Blog <i data-lucide="chevron-right"></i></a></li>
-      <li><a href="contact.html" class="drawer-nav-link">Contact <i data-lucide="chevron-right"></i></a></li>
-      <li><a href="dashboard.html" class="drawer-nav-link active">Dashboard <i data-lucide="chevron-right"></i></a></li>
-    </ul>
-    <div class="drawer-actions">
-      <div class="drawer-action-row">
-        <span>RTL / LTR</span>
-        <button class="icon-btn rtl-toggle" aria-label="Toggle RTL">⇆</button>
-      </div>
-      <div class="drawer-action-row">
-        <span>Dark / Light Mode</span>
-        <button class="icon-btn theme-toggle" aria-label="Toggle Theme"><i data-lucide="sun"></i></button>
-      </div>
-      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
-    </div>
-  </aside>
+  <!-- Dashboard Drawer Backdrop Overlay (<= 1024px) -->
+  <div class="dash-drawer-overlay" id="dashDrawerOverlay"></div>
 
   <!-- ==========================================================================
        DASHBOARD MAIN LAYOUT
        ========================================================================== -->
   <div class="dashboard-layout">
-    <!-- Sidebar -->
-    <aside class="dash-sidebar">
-      <div>
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; padding-inline: 8px;">
-          <div style="width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--secondary)); display: flex; align-items: center; justify-content: center; font-weight: var(--weight-bold-inline); color: #fff;">
+    <!-- Sidebar / Off-Canvas Drawer on <= 1024px -->
+    <aside class="dash-sidebar" id="dashSidebar">
+      <div class="dash-sidebar-top">
+        <!-- Dashboard Drawer Header (Visible on <= 1024px) -->
+        <div class="dash-drawer-header">
+          <div class="dash-drawer-title-box">
+            <span class="dash-portal-badge"><i data-lucide="shield-check"></i> Host Portal</span>
+            <h3 class="dash-drawer-page-name">Customer Dashboard</h3>
+          </div>
+          <button class="drawer-close-btn dash-drawer-close-btn" id="dashDrawerCloseBtn" aria-label="Close Dashboard Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+          </button>
+        </div>
+
+        <div class="dash-user-profile">
+          <div class="dash-user-avatar">
             JD
           </div>
-          <div>
-            <strong style="display: block; font-size: 0.95rem;">Jordan Davis</strong>
-            <span style="font-size: 0.78rem; color: var(--secondary);">VIP Host Account</span>
+          <div class="dash-user-meta">
+            <strong class="dash-user-name">Jordan Davis</strong>
+            <span class="dash-user-role">VIP Host Account</span>
           </div>
         </div>
 
@@ -117,12 +84,28 @@
             <i data-lucide="settings"></i> Profile & Address
           </li>
         </ul>
-      </div>
 
-      <div>
-        <button id="btnNewBooking" class="btn btn-primary" style="width: 100%; margin-bottom: 12px;">
+        <button id="btnNewBooking" class="btn btn-primary dash-new-res-btn" style="width: 100%; margin-block: 16px 12px;">
           <i data-lucide="plus-circle"></i> New Reservation
         </button>
+
+        <!-- Main Website Navigation inside Mobile Drawer -->
+        <div class="dash-drawer-site-nav">
+          <div class="dash-site-nav-heading">Website Pages</div>
+          <ul class="dash-site-links">
+            <li><a href="index.html" class="dash-site-link"><i data-lucide="home"></i> Home</a></li>
+            <li><a href="home2.html" class="dash-site-link"><i data-lucide="sparkles"></i> Home 2</a></li>
+            <li><a href="services.html" class="dash-site-link"><i data-lucide="headphones"></i> Services & Equipment</a></li>
+            <li><a href="packages.html" class="dash-site-link"><i data-lucide="tag"></i> Packages & Pricing</a></li>
+            <li><a href="gallery.html" class="dash-site-link"><i data-lucide="image"></i> Gallery</a></li>
+            <li><a href="corporate.html" class="dash-site-link"><i data-lucide="briefcase"></i> Corporate</a></li>
+            <li><a href="blog.html" class="dash-site-link"><i data-lucide="newspaper"></i> Blog</a></li>
+            <li><a href="contact.html" class="dash-site-link"><i data-lucide="mail"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dash-sidebar-bottom">
         <a href="login.html" class="dash-menu-item" style="color: var(--error);">
           <i data-lucide="log-out"></i> Sign Out
         </a>
@@ -133,15 +116,15 @@
     <main class="dash-main-content">
       <!-- TAB 1: OVERVIEW -->
       <div class="dash-tab-pane" id="tab-overview">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 16px;">
-          <div>
-            <h1 style="font-size: 2rem;">Customer Portal Overview</h1>
-            <p>Welcome back, Jordan! Here is the live status of your party sound gear.</p>
+        <div class="dash-overview-hero">
+          <div class="dash-hero-text">
+            <h1 class="dash-title">Customer Portal Overview</h1>
+            <p class="dash-subtitle">Welcome back, Jordan! Here is the live status of your party sound gear.</p>
           </div>
           <!-- Live Countdown Widget -->
-          <div style="background: var(--bg-surface); border: 1px solid var(--border-glow); padding: 10px 18px; border-radius: var(--radius-btn); text-align: right;">
-            <span style="font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase;">Next Rave Countdown:</span>
-            <div id="eventCountdown" style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: var(--weight-h3); color: var(--primary);">14d 06h 24m 10s</div>
+          <div class="dash-countdown-card">
+            <span class="countdown-badge-label">Next Rave Countdown:</span>
+            <div id="eventCountdown" class="countdown-timer-val">14d 06h 24m 10s</div>
           </div>
         </div>
 
@@ -182,49 +165,56 @@
 
         <!-- Active Reservation Tracker Table -->
         <div class="dash-table-card">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-            <h3 style="font-size: 1.35rem;">Upcoming & Active Reservations</h3>
-            <span style="font-size: 0.85rem; color: var(--text-muted);">Real-time equipment tracking</span>
+          <div class="dash-card-header">
+            <div class="dash-card-header-main">
+              <h3 class="dash-card-title">Upcoming & Active Reservations</h3>
+              <p class="dash-card-subtitle">Real-time equipment tracking & dispatch status</p>
+            </div>
+            <div class="dash-card-header-actions">
+              <span class="table-scroll-hint"><i data-lucide="arrow-left-right"></i> Swipe table</span>
+            </div>
           </div>
 
-          <table class="dash-table" id="reservationsTable">
-            <thead>
-              <tr>
-                <th>Booking Ref</th>
-                <th>Event Date</th>
-                <th>Equipment Details</th>
-                <th>Status</th>
-                <th>Total</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>#SB-89241</strong></td>
-                <td>Oct 17, 2026</td>
-                <td>125x LED Headsets + 3 Transmitters + UV Rig</td>
-                <td><span class="status-badge status-in-transit"><i data-lucide="truck"></i> In Transit (Arriving Oct 15)</span></td>
-                <td>$589.00</td>
-                <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice #SB-89241 PDF...')">Invoice</button></td>
-              </tr>
-              <tr>
-                <td><strong>#SB-77190</strong></td>
-                <td>Nov 05, 2026</td>
-                <td>50x Headsets (Intimate Rooftop Package)</td>
-                <td><span class="status-badge status-confirmed"><i data-lucide="check-circle"></i> Confirmed & Testing</span></td>
-                <td>$249.00</td>
-                <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice #SB-77190 PDF...')">Invoice</button></td>
-              </tr>
-              <tr>
-                <td><strong>#SB-62045</strong></td>
-                <td>Aug 14, 2026</td>
-                <td>100x Headsets (Summer Beach Rave)</td>
-                <td><span class="status-badge status-confirmed" style="color: var(--text-dim); background: rgba(255,255,255,0.05);"><i data-lucide="archive"></i> Completed & Returned</span></td>
-                <td>$499.00</td>
-                <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading Receipt #SB-62045...')">Receipt</button></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-responsive">
+            <table class="dash-table" id="reservationsTable">
+              <thead>
+                <tr>
+                  <th class="col-ref">Booking Ref</th>
+                  <th class="col-date">Event Date</th>
+                  <th class="col-details">Equipment Details</th>
+                  <th class="col-status">Status</th>
+                  <th class="col-total">Total</th>
+                  <th class="col-action">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-ref"><strong>#SB-89241</strong></td>
+                  <td class="col-date">Oct 17, 2026</td>
+                  <td class="col-details">125x LED Headsets + 3 Transmitters + UV Rig</td>
+                  <td class="col-status"><span class="status-badge status-in-transit"><i data-lucide="truck"></i> In Transit (Arriving Oct 15)</span></td>
+                  <td class="col-total"><strong>$589.00</strong></td>
+                  <td class="col-action"><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice #SB-89241 PDF...')">Invoice</button></td>
+                </tr>
+                <tr>
+                  <td class="col-ref"><strong>#SB-77190</strong></td>
+                  <td class="col-date">Nov 05, 2026</td>
+                  <td class="col-details">50x Headsets (Intimate Rooftop Package)</td>
+                  <td class="col-status"><span class="status-badge status-confirmed"><i data-lucide="check-circle"></i> Confirmed & Testing</span></td>
+                  <td class="col-total"><strong>$249.00</strong></td>
+                  <td class="col-action"><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice #SB-77190 PDF...')">Invoice</button></td>
+                </tr>
+                <tr>
+                  <td class="col-ref"><strong>#SB-62045</strong></td>
+                  <td class="col-date">Aug 14, 2026</td>
+                  <td class="col-details">100x Headsets (Summer Beach Rave)</td>
+                  <td class="col-status"><span class="status-badge status-confirmed" style="color: var(--text-dim); background: rgba(255,255,255,0.05);"><i data-lucide="archive"></i> Completed & Returned</span></td>
+                  <td class="col-total"><strong>$499.00</strong></td>
+                  <td class="col-action"><button class="btn btn-outline btn-sm" onclick="alert('Downloading Receipt #SB-62045...')">Receipt</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
@@ -289,40 +279,92 @@
 
       <!-- TAB 4: INVOICES -->
       <div class="dash-tab-pane" id="tab-invoices" style="display: none;">
-        <h2 style="margin-bottom: 8px;">Invoices & Billing History</h2>
-        <p style="margin-bottom: 24px;">View, print, and download PDF receipts for all party rentals and corporate bookings.</p>
+        <div class="dash-overview-hero">
+          <div class="dash-hero-text">
+            <h2 class="dash-title">Invoices & Billing History</h2>
+            <p class="dash-subtitle">View, print, and download PDF receipts for all party rentals and corporate bookings.</p>
+          </div>
+          <div class="dash-invoice-summary-pills">
+            <div class="invoice-pill">
+              <span class="pill-label">Total Billed:</span>
+              <strong class="pill-val">$838.00</strong>
+            </div>
+            <div class="invoice-pill">
+              <span class="pill-label">Account Status:</span>
+              <strong class="pill-val status-paid-text"><i data-lucide="check-circle"></i> Paid in Full</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Invoice Metric Cards -->
+        <div class="dash-invoice-metric-grid">
+          <div class="invoice-metric-card">
+            <div class="metric-icon"><i data-lucide="receipt"></i></div>
+            <div>
+              <div class="metric-value">2 Completed</div>
+              <div class="metric-label">All Invoices Paid</div>
+            </div>
+          </div>
+          <div class="invoice-metric-card">
+            <div class="metric-icon" style="color: var(--success); background: rgba(16, 185, 129, 0.15);"><i data-lucide="credit-card"></i></div>
+            <div>
+              <div class="metric-value">Visa •••• 4242</div>
+              <div class="metric-label">Primary Card on File</div>
+            </div>
+          </div>
+          <div class="invoice-metric-card">
+            <div class="metric-icon" style="color: var(--secondary); background: rgba(6, 182, 212, 0.15);"><i data-lucide="shield-check"></i></div>
+            <div>
+              <div class="metric-value">0 Pending</div>
+              <div class="metric-label">No Outstanding Dues</div>
+            </div>
+          </div>
+        </div>
 
         <div class="dash-table-card">
-          <table class="dash-table">
-            <thead>
-              <tr>
-                <th>Invoice #</th>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Payment Method</th>
-                <th>Status</th>
-                <th>PDF</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>INV-2026-089</td>
-                <td>Oct 10, 2026</td>
-                <td>$589.00</td>
-                <td>Visa •••• 4242</td>
-                <td><span class="status-badge status-confirmed">Paid in Full</span></td>
-                <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice INV-2026-089...')">Download</button></td>
-              </tr>
-              <tr>
-                <td>INV-2026-071</td>
-                <td>Sep 28, 2026</td>
-                <td>$249.00</td>
-                <td>Mastercard •••• 8819</td>
-                <td><span class="status-badge status-confirmed">Paid in Full</span></td>
-                <td><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice INV-2026-071...')">Download</button></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="dash-card-header">
+            <div class="dash-card-header-main">
+              <h3 class="dash-card-title">Recent Statements & Invoices</h3>
+              <p class="dash-card-subtitle">Download official tax invoices & payment confirmations</p>
+            </div>
+            <div class="dash-card-header-actions">
+              <span class="table-scroll-hint"><i data-lucide="arrow-left-right"></i> Swipe table</span>
+              <button class="btn btn-outline btn-sm" onclick="alert('Downloading all invoices in a ZIP archive...')"><i data-lucide="download-cloud"></i> Download All</button>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="dash-table" id="invoicesTable">
+              <thead>
+                <tr>
+                  <th class="col-inv">Invoice #</th>
+                  <th class="col-date">Date</th>
+                  <th class="col-amount">Amount</th>
+                  <th class="col-method">Payment Method</th>
+                  <th class="col-status">Status</th>
+                  <th class="col-action">PDF</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="col-inv"><strong>INV-2026-089</strong></td>
+                  <td class="col-date">Oct 10, 2026</td>
+                  <td class="col-amount"><strong>$589.00</strong></td>
+                  <td class="col-method">Visa •••• 4242</td>
+                  <td class="col-status"><span class="status-badge status-confirmed"><i data-lucide="check-circle"></i> Paid in Full</span></td>
+                  <td class="col-action"><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice INV-2026-089...')"><i data-lucide="download"></i> PDF</button></td>
+                </tr>
+                <tr>
+                  <td class="col-inv"><strong>INV-2026-071</strong></td>
+                  <td class="col-date">Sep 28, 2026</td>
+                  <td class="col-amount"><strong>$249.00</strong></td>
+                  <td class="col-method">Mastercard •••• 8819</td>
+                  <td class="col-status"><span class="status-badge status-confirmed"><i data-lucide="check-circle"></i> Paid in Full</span></td>
+                  <td class="col-action"><button class="btn btn-outline btn-sm" onclick="alert('Downloading Invoice INV-2026-071...')"><i data-lucide="download"></i> PDF</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
@@ -333,7 +375,7 @@
 
         <div class="feature-card" style="align-items: stretch; text-align: left; max-width: 680px;">
           <form data-validate="true" data-success-msg="Profile and shipping address updated! 📦">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+            <div class="form-grid-2">
               <div class="form-group">
                 <label class="form-label">Full Name</label>
                 <input type="text" class="form-input" value="Jordan Davis" required>
@@ -349,7 +391,7 @@
               <input type="text" class="form-input" value="842 Grand Avenue, Apt 4B" required>
             </div>
 
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px;">
+            <div class="form-grid-3">
               <div class="form-group">
                 <label class="form-label">City</label>
                 <input type="text" class="form-input" value="Los Angeles" required>

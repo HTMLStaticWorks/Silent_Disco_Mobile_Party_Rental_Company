@@ -31,16 +31,20 @@
   border-left: none;
   border-right: 1px solid var(--border-color);
   transform: translateX(-100%);
+  box-shadow: 10px 0 40px rgba(0, 0, 0, 0.5);
 }
 
 [dir="rtl"] .mobile-drawer.active {
   transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
-/* Featured Badge Positioning */
+/* Featured Badge Positioning (Centered in RTL too) */
 [dir="rtl"] .featured-badge {
   right: auto;
-  left: 14px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Form Inputs & Groups */
@@ -81,3 +85,154 @@
   padding-inline-start: 0;
   padding-inline-end: 4px;
 }
+
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 28px;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .back-to-top {
+    right: auto;
+    left: 18px;
+  }
+}
+
+/* DJ Mixer Console Hardware remains LTR to match crossfader axis */
+[dir="rtl"] .dj-mixer-deck {
+  direction: ltr;
+}
+
+/* Service Card Bullet List centered in RTL mode */
+[dir="rtl"] .service-bullet-list,
+[dir="rtl"] .service-card ul {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact Page RTL Overrides */
+[dir="rtl"] .contact-form-card {
+  text-align: right;
+}
+
+[dir="rtl"] .contact-form-title {
+  text-align: right;
+}
+
+[dir="rtl"] .contact-info-card {
+  align-items: flex-start;
+  text-align: right;
+}
+
+[dir="rtl"] .contact-info-card .card-title {
+  text-align: right !important;
+}
+
+[dir="rtl"] .contact-info-card .card-desc {
+  text-align: right !important;
+}
+
+[dir="rtl"] .contact-phone-number {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+[dir="rtl"] .depot-note {
+  text-align: right;
+}
+
+[dir="rtl"] .social-btn {
+  text-align: right;
+}
+
+[dir="rtl"] .map-header-info {
+  text-align: right;
+}
+
+/* Dashboard Brand & Sidebar Alignment in RTL */
+[dir="rtl"] .dash-brand-wrapper {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+  padding-inline: 24px;
+}
+
+[dir="rtl"] .dash-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+}
+
+/* RTL Table & Scroll Hint Overrides */
+[dir="rtl"] .table-scroll-hint i,
+[dir="rtl"] .table-scroll-hint svg {
+  transform: scaleX(-1);
+}
+
+/* Dashboard Off-Canvas Drawer RTL Overrides (<= 1024px) */
+@media (max-width: 1024px) {
+  [dir="rtl"] .dash-sidebar {
+    right: auto;
+    left: 0;
+    border-left: none;
+    border-right: 1px solid var(--border-color);
+    box-shadow: 10px 0 40px rgba(0, 0, 0, 0.7);
+    transform: translateX(-100%);
+  }
+
+  [dir="rtl"] .dash-sidebar.active {
+    transform: translateX(0);
+  }
+
+  [dir="rtl"] .dash-drawer-header {
+    direction: rtl;
+  }
+}
+
+/* Dashboard Overview & Invoice RTL Alignments */
+[dir="rtl"] .dash-hero-text {
+  text-align: right;
+}
+
+[dir="rtl"] .dash-hero-text .dash-title,
+[dir="rtl"] .dash-hero-text .dash-subtitle {
+  text-align: right;
+}
+
+[dir="rtl"] .dash-countdown-card {
+  text-align: left;
+}
+
+[dir="rtl"] .dash-card-header-main {
+  text-align: right;
+}
+
+[dir="rtl"] .dash-card-title,
+[dir="rtl"] .dash-card-subtitle {
+  text-align: right;
+}
+
+[dir="rtl"] .dash-table th.col-action,
+[dir="rtl"] .dash-table td.col-action {
+  text-align: left;
+}
+
+[dir="rtl"] .dash-table th.col-ref,
+[dir="rtl"] .dash-table td.col-ref,
+[dir="rtl"] .dash-table th.col-inv,
+[dir="rtl"] .dash-table td.col-inv {
+  text-align: right;
+}
+
+[dir="rtl"] .kpi-card,
+[dir="rtl"] .invoice-metric-card {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .dash-countdown-card {
+    text-align: right;
+  }
+}
+
+
